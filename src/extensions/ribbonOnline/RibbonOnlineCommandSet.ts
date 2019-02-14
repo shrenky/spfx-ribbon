@@ -6,7 +6,6 @@ import {
   IListViewCommandSetListViewUpdatedParameters,
   IListViewCommandSetExecuteEventParameters
 } from '@microsoft/sp-listview-extensibility';
-import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'RibbonOnlineCommandSetStrings';
 import * as React from 'react';
@@ -40,7 +39,6 @@ export default class RibbonOnlineCommandSet extends BaseListViewCommandSet<IRibb
   public onListViewUpdated(event: IListViewCommandSetListViewUpdatedParameters): void {
     const ribbonCommand: Command = this.tryGetCommand('COMMAND_RIBBON');
     if (ribbonCommand) {
-      // This command should be hidden unless exactly one row is selected.
       ribbonCommand.visible = event.selectedRows.length >= 0;
     }
   }
