@@ -1,11 +1,12 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+import Styles from './Tab.module.scss';
 
 export interface ITabProps {
     activeTab: string;
     key: string;
     label: string;
-    onClick: (label:string)=>void;
+    onClick?: (label:string)=>void;
 }
 
 export interface ITabStates {
@@ -31,20 +32,29 @@ export class Tab extends React.Component<ITabProps, ITabStates> {
             label,
           },
         } = this;
-    
-        let className = 'tab-list-item';
-    
+        
         if (activeTab === label) {
-          className += ' tab-list-active';
+            return (
+                <li
+                    className={Styles.tablistactive}
+                    onClick={this.onClick}
+                >
+                    {label}
+                </li>
+            );
+        }
+        else
+        {
+            return (
+                <li
+                    className={Styles.tablistitem}
+                    onClick={this.onClick}
+                >
+                    {label}
+                </li>
+            );
         }
     
-        return (
-          <li
-            className={className}
-            onClick={onClick}
-          >
-            {label}
-          </li>
-        );
+        
       }
 }

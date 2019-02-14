@@ -28,8 +28,8 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
         const { children } = this.props;
         const { activeTab } = this.state;
         return (
-          <div className="tabs">
-            <ol className={Styles["tab-list"]}>
+          <div className={Styles.tab}>
+            <ol className={Styles.tablist}>
               {children.map((child) => {
                 const { label } = child.props;
     
@@ -38,12 +38,12 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
                     activeTab={activeTab}
                     key={label}
                     label={label}
-                    onClick={this.onClickTabItem.bind(this)}
+                    onClick={this.onClickTabItem}
                   />
                 );
               })}
             </ol>
-            <div className="tab-content">
+            <div>
               {children.map((child) => {
                 if (child.props.label !== activeTab) return undefined;
                 return child.props.children;
