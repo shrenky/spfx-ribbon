@@ -1,6 +1,6 @@
 ## spfx-ribbon
 
-This is where you include your WebPart documentation.
+Show Ribbon on SharePoint modern UI.
 
 ### Building the code
 
