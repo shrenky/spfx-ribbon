@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+import Styles from './Tab.module.scss';
 import { Tabs } from './Tabs';
 import { Tab } from './Tab';
 
@@ -20,14 +21,17 @@ export class Ribbon extends React.Component<IRibbonProps, IRibbonStates> {
 
     public render(){
         return (
-            <Tabs>
-                <Tab key="Gator" label="Gator" activeTab="Gator">
-                    See ya later, <em>Alligator</em>!
-                </Tab>
-                <Tab key="Croc" label="Croc" activeTab="Croc">
-                    After 'while, <em>Crocodile</em>!
-                </Tab>
-          </Tabs>
+            <div className={Styles.ribbon}>
+                <Tabs>
+                    <Tab key="Files" label="Files" activeTab="Files">
+                        Ribbon buttons, <em>Files</em>!
+                    </Tab>
+                    <Tab key="Library" label="Library" activeTab="Files">
+                        Library settings, <em>Library</em>!
+                    </Tab>
+                </Tabs>
+            </div>
+            
         );
     }
 }

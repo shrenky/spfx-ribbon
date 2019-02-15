@@ -1,22 +1,27 @@
+.ribbon {
+    margin-top: -10px;
+    height: 120px;
+}
+
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-  }
+}
 
 .tablist {
     border-bottom: 1px solid #ccc;
     padding-left: 0;
-  }
-  
-  .tablistitem {
+}
+
+.tablistitem {
     display: inline-block;
     list-style: none;
     margin-bottom: -1px;
     padding: 0.5rem 0.75rem;
-  }
-  
-  .tablistactive {
+}
+
+.tablistactive {
     display: inline-block;
     list-style: none;
     margin-bottom: -1px;
@@ -24,11 +29,11 @@
     background-color: white;
     border: solid #ccc;
     border-width: 1px 1px 0 1px;
-  }
+}
 
-  .tabcontent {
+.tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-  }
+}

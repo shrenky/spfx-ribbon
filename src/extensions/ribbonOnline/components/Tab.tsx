@@ -22,7 +22,6 @@ export class Tab extends React.Component<ITabProps, ITabStates> {
 
     private onClick(){
         const { label } = this.props;
-        console.log('Click tab label: ' + label);
         this.props.onClick(label);
     }
     

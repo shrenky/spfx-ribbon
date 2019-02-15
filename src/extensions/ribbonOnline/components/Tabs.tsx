@@ -22,7 +22,6 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
     }
 
     private onClickTabItem(tab){
-        console.log('click tab: ' + tab);
         this.setState({ activeTab: tab });
     }
 
