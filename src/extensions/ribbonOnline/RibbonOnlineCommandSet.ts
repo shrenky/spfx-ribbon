@@ -64,7 +64,8 @@ export default class RibbonOnlineCommandSet extends BaseListViewCommandSet<IRibb
       
     if(!this.isRibbonVisible)
     {
-      ReactDom.render(commandBar, RibbonHelper.appendRibbon(document.querySelector(`button[name="${elementName}"]`) as HTMLElement));
+      //document.querySelector(`button[name="${elementName}"]`) as HTMLElement
+      ReactDom.render(commandBar, RibbonHelper.appendRibbon(document.querySelector('.od-Files-topBar') as HTMLElement));
       this.isRibbonVisible = !this.isRibbonVisible;
     }
     else

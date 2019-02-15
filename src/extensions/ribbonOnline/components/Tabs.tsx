@@ -18,24 +18,26 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
         this.state = {
             activeTab: this.props.children[0].props.label
         };
+        this.onClickTabItem = this.onClickTabItem.bind(this);
     }
 
-    onClickTabItem = (tab) => {
+    private onClickTabItem(tab){
+        console.log('click tab: ' + tab);
         this.setState({ activeTab: tab });
-      }
+    }
 
     public render() {
         const { children } = this.props;
         const { activeTab } = this.state;
         return (
-          <div className={Styles.tab}>
+          <div>
             <ol className={Styles.tablist}>
               {children.map((child) => {
                 const { label } = child.props;
     
                 return (
                   <Tab
-                    activeTab={activeTab}
+                    activeTab={this.state.activeTab}
                     key={label}
                     label={label}
                     onClick={this.onClickTabItem}

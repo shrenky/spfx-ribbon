@@ -17,16 +17,17 @@ export class Tab extends React.Component<ITabProps, ITabStates> {
     constructor(props)
     {
         super(props);
+        this.onClick = this.onClick.bind(this);
     }
 
-    onClick = () => {
-        const { label, onClick } = this.props;
-        onClick(label);
-      }
+    private onClick(){
+        const { label } = this.props;
+        console.log('Click tab label: ' + label);
+        this.props.onClick(label);
+    }
     
-      render() {
+    public  render() {
         const {
-          onClick,
           props: {
             activeTab,
             label,
