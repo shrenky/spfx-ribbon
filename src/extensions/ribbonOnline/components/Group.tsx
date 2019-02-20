@@ -3,8 +3,8 @@ import * as ReactDom from 'react-dom';
 import Styles from './Group.module.scss';
 
 export interface IGroupProps {
+    children: any[];
     groupName: string;
-    children: any[]
 }
 
 export class Group extends React.Component<IGroupProps> {
@@ -13,11 +13,14 @@ export class Group extends React.Component<IGroupProps> {
     }
 
     public render() {
+        console.log('Group');
+        console.log(this.props.children);
         return (
-        <div>
+        <div className={Styles.group}>
             {
+                
                 this.props.children.map((child) => {
-                    return child.props.children;
+                    return child;
               })
             }
         </div>);

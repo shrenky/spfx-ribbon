@@ -1,9 +1,10 @@
 import * as React from 'react';
+import Styles from './Button.module.scss';
 
 export interface IButtonProps {
-    buttonNamt: string;
-    image: string;
-    onClick: ()=>void;
+    buttonName: string;
+    //image: string;
+    //onClick: ()=>void;
 }
 
 export interface IButtonStates {
@@ -17,8 +18,8 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
 
     public render() {
         return (
-            <div>
-                
+            <div className={Styles.button}>
+                {this.props.buttonName}
             </div>
         );
     }
