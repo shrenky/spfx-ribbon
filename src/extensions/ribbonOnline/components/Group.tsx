@@ -16,13 +16,19 @@ export class Group extends React.Component<IGroupProps> {
         console.log('Group');
         console.log(this.props.children);
         return (
-        <div className={Styles.group}>
-            {
+        <li className={Styles.group}>
+            <span>
+                <span className={Styles.groupBody}>
+                    {
+                        this.props.children.map((child) => {
+                            return child;
+                        })
+                    }
+                </span>
                 
-                this.props.children.map((child) => {
-                    return child;
-              })
-            }
-        </div>);
+                <span className={Styles.groupTitle}>{this.props.groupName}</span>
+            </span>
+            <span className={Styles.groupSeperator}></span>
+        </li>);
     }
 }

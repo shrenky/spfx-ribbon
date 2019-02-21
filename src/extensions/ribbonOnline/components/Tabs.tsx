@@ -44,13 +44,13 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
                 );
               })}
             </ol>
-            <div className={Styles.tab}>
+            <ul className={Styles.tab}>
               {children.map((child) => {
                 if (child.props.label !== activeTab) return undefined;
                 console.log(child.props);
                 return child.props.children;
               })}
-            </div>
+            </ul>
           </div>
         );
     }

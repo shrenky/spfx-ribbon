@@ -2,6 +2,22 @@
     display: block;
     height: 48px;
     width: 32px;
-    background-color: red;
     margin-left: 1px;
+}
+
+.buttonContainer32 {
+    width: 32px;
+    height: 32px;
+    display: 'inline-block';
+    z-Index: 10;
+    overflow: 'hidden';
+    position: 'relative';
+}
+
+.buttonImage32 {
+    background-Position: 35px 35px;
+    //position: 'absolute';
+    //top: 35px;
+    //left: 35px;
+    z-Index: 5;
 }

@@ -18,9 +18,15 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
 
     public render() {
         return (
-            <div className={Styles.button}>
-                {this.props.buttonName}
-            </div>
+            <span className={Styles.button}>
+                <span className={Styles.buttonContainer32}>
+                    <img alt="" src="/_layouts/15/1033/images/formatmap32x32.png" className={Styles.buttonImage32}></img>
+                </span>
+                <span>
+                    {this.props.buttonName}
+                </span>
+                
+            </span>
         );
     }
 }

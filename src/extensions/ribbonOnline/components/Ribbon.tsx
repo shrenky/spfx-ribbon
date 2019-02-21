@@ -28,11 +28,11 @@ export class Ribbon extends React.Component<IRibbonProps, IRibbonStates> {
                     <Tab key="Files" label="Files" activeTab="Files">
                         <Group groupName="Group1">
                             <Button buttonName="Button1"></Button>
-                            <Button buttonName="Button1-1"></Button>
+                            <div></div>
                         </Group>
                         <Group groupName="Group2">
-                            <Button buttonName="Button2"></Button>
-                            <Button buttonName="Button2-1"></Button>
+                            <div></div>
+                            <div></div>
                         </Group>
                     </Tab>
                     <Tab key="Library" label="Library" activeTab="Files">
