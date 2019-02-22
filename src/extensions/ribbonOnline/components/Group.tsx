@@ -17,7 +17,7 @@ export class Group extends React.Component<IGroupProps> {
         console.log(this.props.children);
         return (
         <li className={Styles.group}>
-            <span>
+            <span className={Styles.groupContainer}>
                 <span className={Styles.groupBody}>
                     {
                         this.props.children.map((child) => {

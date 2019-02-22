@@ -26,11 +26,11 @@ export class Ribbon extends React.Component<IRibbonProps, IRibbonStates> {
             <div className={Styles.ribbon}>
                 <Tabs>
                     <Tab key="Files" label="Files" activeTab="Files">
-                        <Group groupName="Group1">
-                            <Button buttonName="Button1"></Button>
-                            <div></div>
+                        <Group groupName="New">
+                            <Button buttonName="New Document"></Button>
+                            <Button buttonName="Upload Document"></Button>
                         </Group>
-                        <Group groupName="Group2">
+                        <Group groupName="Open &amp; Check Out">
                             <div></div>
                             <div></div>
                         </Group>

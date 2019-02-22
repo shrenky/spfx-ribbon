@@ -47,7 +47,6 @@ export class Tabs extends React.Component<ITabsProps, ITabsStates> {
             <ul className={Styles.tab}>
               {children.map((child) => {
                 if (child.props.label !== activeTab) return undefined;
-                console.log(child.props);
                 return child.props.children;
               })}
             </ul>

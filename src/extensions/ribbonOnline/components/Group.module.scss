@@ -6,8 +6,12 @@
     text-align: center;
 }
 
+.groupContainer {
+    display: inline-block;
+}
+
 .groupBody {
-    display: block;
+    display: inline-block;
     padding: 2px 3px 0px;
     height: 71px;
     text-align: center;
