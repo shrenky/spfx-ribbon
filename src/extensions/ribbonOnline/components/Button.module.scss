@@ -19,9 +19,10 @@
 }
 
 .buttonImage32 {
-    background-Position: 35px 35px;
+    background-position: -35px -35px;
+    background: url('/_layouts/15/1033/images/formatmap32x32.png');
     //position: 'absolute';
-    //top: 35px;
-    //left: 35px;
-    z-Index: 5;
+    width: 32px;
+    height: 32px;
+    z-index: 5;
 }

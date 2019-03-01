@@ -20,7 +20,7 @@ export class Button extends React.Component<IButtonProps, IButtonStates> {
         return (
             <span className={Styles.button}>
                 <span className={Styles.imageContainer32}>
-                    <img alt="" src="/_layouts/15/1033/images/formatmap32x32.png" className={Styles.buttonImage32}></img>
+                    <div className={Styles.buttonImage32}></div>
                 </span>
                 <span className={Styles.buttonName}>
                     {this.props.buttonName}
